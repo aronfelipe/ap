@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Apartamento à Beira-Mar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light background color */
+            color: #333; /* Dark text color */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #e0c07a; /* Sandy color */
+            color: #333; /* Dark text on sandy background */
+            text-align: center;
+            padding: 1em;
+            border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff; /* White background for content */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #map {
+            height: 300px;
+            width: 100%;
+            border-bottom: 1px solid #ddd; /* Light border color */
+            margin-bottom: 20px;
+        }
+
+        .property-description {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #e0c07a;
+            border-bottom: 2px solid #e0c07a;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555; /* Medium-dark text color */
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .photo {
+            margin: 10px;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+        }
+
+        .google-review {
+            border: 1px solid #ddd; /* Light border color */
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+        }
+
+        .google-review-rating {
+            font-weight: bold;
+            color: #e0c07a;
+        }
+
+        .average-rating {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #e0c07a;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info li {
+            margin-bottom: 8px;
+            color: #555; /* Medium-dark text color */
+        }
+
+        .contact-info li a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .photo {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aluguel de Apartamento à Beira-Mar no Guarujá Praia da Enseada</h1>
+    </header>
+
+    <div class="container">
+        <div class="property-description">
+            <h2>Localização</h2>
+            <p>Nosso apartamento está convenientemente situado em frente à praia, proporcionando fácil acesso a
+                restaurantes e outras comodidades. Confira o mapa abaixo para obter direções:</p>
+            <div id="map"></div>
+
+            <h2>Visão Geral do Apartamento</h2>
+            <p>Bem-vindo ao nosso aconchegante apartamento no Guarujá, uma joia a apenas 100 metros da deslumbrante Praia da Enseada e próximo ao icônico Morro do Maluf. Este é o lugar perfeito para aqueles que buscam uma estadia relaxante e cheia de charme.</p>
+
+            <p>Com dois quartos e dois banheiros, nosso espaço oferece conforto e conveniência. O banheiro principal possui um box espaçoso, proporcionando momentos de relaxamento após um dia ensolarado na praia. O apartamento foi recentemente reformado e pintado, refletindo um ambiente moderno e acolhedor.</p>
+                
+            <p>A cozinha totalmente equipada, integrada a uma prática área de serviço, permite que você prepare suas refeições com facilidade, seja experimentando a culinária local ou desfrutando de pratos caseiros. A proximidade com a praia permite que você desfrute da brisa marinha e das belas vistas enquanto se aventura pelos diversos restaurantes e quiosques à beira-mar.</p>
+                
+            <p>Durante sua estadia, sinta-se à vontade para relaxar na sala de estar, projetada para proporcionar um ambiente agradável para confraternizações ou momentos de descanso. A localização estratégica do apartamento facilita o acesso a diversas atrações locais, tornando-o ideal para explorar as belezas naturais e culturais do Guarujá.</p>
+                
+            <p>Não hesite em nos contatar para mais informações ou para reservar este refúgio encantador. Estamos ansiosos para recebê-lo em nosso pedacinho de paraíso à beira-mar.</p>
+
+            <h2>Recursos</h2>
+            <ul>
+                <li>2 Quartos</li>
+                <li>2 Banheiros</li>
+                <li>Cozinha</li>
+                <li>Sala de Estar</li>
+                <li>Sala de Jantar</li>
+                <li>Salão de Festas</li>
+                <li>Ducha Externa</li>
+                <li>Garagem demarcada</li>
+            </ul>
+        </div>
+
+        <h2>Galeria de Fotos</h2>
+        <div class="photo-gallery">
+            <!-- Substitua as URLs de imagem de exemplo com as URLs reais das fotos do seu apartamento -->
+            <img class="photo" src="imagem1.jpeg" alt="Foto do Apartamento 1">
+            <img class="photo" src="imagem2.jpeg" alt="Foto do Apartamento 2">
+            <img class="photo" src="imagem3.jpeg" alt="Foto do Apartamento 3">
+        </div>
+
+        <h2>Google Reviews - Edifício Sernambiguara</h2>
+        <div id="google-reviews"></div>
+
+        <h2>Contato</h2>
+        <p>Para mais informações ou para fazer sua reserva, entre em contato:</p>
+        <ul class="contact-info">
+            <li>Telefone: <a href="tel:+5511983320296">+55 11 98332-0296</a>, falar com Felipe</li>
+            <li>Email: <a href="mailto:felipe.nudelman@gmail.com">felipe.nudelman@gmail.com</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Map and Google Reviews script -->
+    <div id="map"></div>
+
+    <!-- Map and Google Reviews script -->
+    <script>
+        var map;
+        var marker;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -23.989469152600552, lng: -46.24628486686984 },
+                zoom: 15
+            });
+
+            marker = new google.maps.Marker({
+                position: { lat: -23.989469152600552, lng: -46.24628486686984 },
+                map: map
+            });
+
+            // Create an info window without a hardcoded place ID
+            var infowindow = new google.maps.InfoWindow();
+
+            // Call the function to initialize Google Reviews with dynamic place ID
+            initGoogleReviews(infowindow);
+        }
+
+        function initGoogleReviews(infowindow) {
+            // Hardcoded place name "Edifício Sernambiguara" for simplicity
+            var placeName = 'Edifício Sernambiguara';
+
+            // Set marker position and open infowindow
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ address: placeName }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK && results && results[0] && results[0].geometry) {
+                    var location = results[0].geometry.location;
+                    map.setCenter(location);
+
+                    // Fetch reviews based on the selected place name
+                    fetchPlaceDetails(results[0].place_id);
+                }
+            });
+        }
+
+        function fetchPlaceDetails(placeId) {
+            var service = new google.maps.places.PlacesService(map);
+
+            var request = {
+                placeId: placeId,
+                fields: ['name', 'reviews'],
+                language: 'pt-BR' // Set the language to Portuguese (Brazil)
+            };
+
+            service.getDetails(request, function (place, status) {
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                    displayReviews(place.reviews);
+                }
+            });
+        }
+
+
+        function displayReviews(reviews) {
+            var reviewsContainer = document.getElementById('google-reviews');
+            reviewsContainer.innerHTML = ''; // Clear existing reviews
+
+            var totalRating = 0;
+            var numReviews = reviews.length;
+
+            reviews.forEach(function (review) {
+                var reviewElement = document.createElement('div');
+                reviewElement.classList.add('google-review');
+
+                var ratingElement = document.createElement('span');
+                ratingElement.classList.add('google-review-rating');
+                ratingElement.innerHTML = 'Avaliação: ' + review.rating;
+                reviewElement.appendChild(ratingElement);
+
+                var textElement = document.createElement('p');
+                textElement.innerHTML = review.text;
+                reviewElement.appendChild(textElement);
+
+                reviewsContainer.appendChild(reviewElement);
+
+                totalRating += review.rating; // Accumulate total rating
+            });
+
+            if (numReviews > 0) {
+                var averageRating = totalRating / numReviews;
+                var averageRatingElement = document.createElement('div');
+                averageRatingElement.classList.add('average-rating');
+                averageRatingElement.innerHTML = 'Avaliação Média: ' + averageRating.toFixed(1);
+                reviewsContainer.insertBefore(averageRatingElement, reviewsContainer.firstChild);
+            }
+        }
+
+        // Include the Google Maps API script with Places library
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBz3Lg6HLkg5eVzjBryEg_tQyLEiPfFJ88&libraries=places&callback=initMap';
+        script.defer = true;
+        document.head.appendChild(script);
+    </script>
+</body>
+
+</html>
